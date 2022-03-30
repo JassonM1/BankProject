@@ -1,0 +1,18 @@
+package com.jasson.bank;
+
+
+
+public class Bankjavalin {
+public static void main(String[] args) {
+	Bankjavalin app = Bankjavalin.create().start();
+	
+	app.get("/", ctx -> ctx.result("Hello World"));
+	
+	
+	
+	
+}
+
+
+}
+

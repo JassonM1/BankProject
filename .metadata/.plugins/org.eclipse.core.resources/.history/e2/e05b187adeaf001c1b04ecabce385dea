@@ -1,0 +1,42 @@
+package com.jasson.bank.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.jasson.assignment.AccountTable;
+import com.jasson.assignment.ConnectionClass;
+
+public class AccountPostgressDao implements AccountDao  {
+
+	@Override
+	public List<AccountTable> getAllAccounts(int Id) {
+	// String Id = ctx.pathParam("Id");
+	
+	Connection conn = ConnectionClass.createConnection();
+	PreparedStatement Pstmt;
+	ResultSet rs;
+	String selectAccount = "select * from account where Customer_id=?";
+	
+    Pstmt = conn.prepareStatement(selectAccount);
+    Pstmt.setString(1, Id);
+    rs = Pstmt.executeQuery();
+    
+   
+	ArrayList<AccountTable> aList=new ArrayList<AccountTable>();
+	AccountTable a;
+	while(rs.next()) {
+		String Account=rs.getString("account_number");
+		String id=rs.getString("customer_id");
+		int Balance=rs.getInt("account_balance");
+		String Type=rs.getString("account_type");
+		String Status=rs.getString("account_status");
+		
+		
+		a=new AccountTable(Account, id, Balance, Type, Status);
+		aList.add(a);
+		}
+	return aList;
+	}
+}

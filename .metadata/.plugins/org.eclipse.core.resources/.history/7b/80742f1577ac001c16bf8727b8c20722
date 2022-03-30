@@ -1,0 +1,9 @@
+package com.jasson.assignment;
+
+public class CustomerId {
+
+	private String name;
+	private  
+	
+}
+}

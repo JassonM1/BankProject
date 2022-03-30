@@ -1,0 +1,21 @@
+package com.jasson.bank;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class BankProject {
+	public static void main(String[] args) {
+		Connection conn;
+		Statement stmt;
+		ResultSet rs;
+		
+		try {
+			Class.forName("org.postgresql.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

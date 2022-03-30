@@ -1,0 +1,7 @@
+package com.jasson.bank.daos;
+
+public interface CustomerDao {
+	
+	
+
+}

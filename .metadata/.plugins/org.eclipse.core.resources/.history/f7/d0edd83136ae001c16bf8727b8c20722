@@ -1,0 +1,23 @@
+package com.jasson.bank;
+
+import java.util.ArrayList;
+
+import com.jasson.assignment.CustomerId;
+
+import io.javalin.http.Handler;
+
+public class CustomerController {
+	public static Handler getAllCustomer=ctx->{
+		
+		ArrayList<CustomerId> cList=new ArrayList<CustomerId>();
+		CustomerId c;
+		while(rs.next)) {
+			String id=rs.getString("id");
+			String name=rs.getString("name");
+			c=new Customer(id,name);
+			cList.add(c);
+		}
+		ctx.json(cList);
+	};
+
+}

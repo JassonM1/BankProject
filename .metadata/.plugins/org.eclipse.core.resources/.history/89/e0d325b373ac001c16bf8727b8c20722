@@ -1,0 +1,10 @@
+package com.jasson.bank;
+
+import io.javalin.http.Handler;
+
+public class HelloController {
+
+	public static Handler sayHello=ctx->{
+		ctx.result("Hello from handler");
+	};
+}

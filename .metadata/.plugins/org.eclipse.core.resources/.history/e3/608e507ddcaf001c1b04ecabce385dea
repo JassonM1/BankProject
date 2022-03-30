@@ -1,0 +1,5 @@
+package com.jasson.bank.daos;
+
+public class AccountPostgressDao implements AccountDao  {
+
+}

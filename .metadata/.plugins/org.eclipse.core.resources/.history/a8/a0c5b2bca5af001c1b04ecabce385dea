@@ -1,0 +1,15 @@
+package com.jasson.bank.daos;
+
+import java.util.List;
+
+import com.jasson.assignment.CustomerId;
+
+public class CustomerPostgressDao implements CustomerDao{
+
+	@Override
+	public List<CustomerId> getAllCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
